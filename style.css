@@ -1,0 +1,207 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #444646;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.grid-container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(5, 1fr), minmax(200px, 1fr); 
+    grid-template-rows: repeat(5, 1fr), minmax(200px, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px black solid;
+    border-radius: 25px;
+    
+  }
+
+  .a{
+    grid-column: 1 / span 3;
+  }
+
+ 
+  .c{
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .d{
+    grid-column: 1 / span 3;
+    grid-row: 4 / span 1;
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+
+  }
+  .e{
+    grid-column: 4 / span 2;
+    grid-row: 1 / span 6;
+  }
+  .f{
+    grid-column: 1 / span 3;
+    grid-row: 5 / span 3;
+  }
+
+
+
+#task-input,
+#task-select-b,
+#combinedMin{
+  border-radius: 20px;;
+}
+
+
+/* Style the input field */
+#combinedData {
+    width: 100%; 
+    height: 70%;
+    padding: 10px; 
+    border: 1px solid #ccc;
+    text-overflow: ellipsis;
+    box-shadow: inset 0 0 5px #ccc;
+    resize: vertical;
+    overflow-y: auto;
+    white-space: normal;
+    border: inset;
+    border-radius: 25px;
+}
+
+
+#combineButton{ 
+    background-color: #4b8e49;
+    opacity: 0.8; 
+    border: 1px black solid;
+    color: white; 
+    padding: 5px 10px; 
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 5px 9px 9px #999
+}
+#combineButton:hover {
+  opacity: 1;
+}
+
+
+/* Style the "Clear" button */
+#clearButton {
+    margin: 10px; 
+    display: none; 
+    background-color: #f44336; 
+    border: 1px black solid;
+    color: white; 
+    padding: 5px 10px; 
+    cursor: pointer;
+    box-shadow: 5px 9px 9px #999;
+    border-radius: 25px;
+}
+
+
+/* Show the "Clear" button when there's content in the input field */
+#combinedData:not(:empty) + #clearButton {
+    display: inline-block;
+}
+
+
+
+/* Notepad Area */
+label,
+textarea {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+/*Pie Chart */
+
+.pie_chart_content{
+  max-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 0px;
+}
+
+.pie_chart_conent .pie_container{
+  background-color: white;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.main_box h4{
+  padding: 25px 0px 25px 0px;
+  color: black;
+
+}
+
+.main_box {
+  background: white;
+  max-height: 100%;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  width: 80%; 
+  margin: 0 auto; 
+  padding: 20px;
+}
+
+.count-box {
+  background-color: white;
+  border-radius: 30px;
+  color: white;
+  height: 100px;
+}
+
+.total-input{
+  border-style: outset;
+}
+
+
+.form-control:disabled,
+.form-control[readonly]{
+  background-color: rgb(60, 151, 230);
+}
+
+.minutes-input {
+  background-color: #dd3b79;
+  border-style: outset;
+}
+
+
+.time-input {
+  background-color: #2adece;
+  border-style: outset;
+}
+
+#myChart{
+  padding: 25px;
+}
+
